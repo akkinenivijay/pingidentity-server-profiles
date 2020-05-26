@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urn:OpenIdConnectProviderPolicy enabled="false" defaultPolicyGroupId="cdlxdefaultoidcpolicy" trackUserSessionsForLogout="true" xmlns:urn="urn:pingidentity.com:pf:openid:connect:idp:policy">
+<urn:OpenIdConnectProviderPolicy enabled="true" defaultPolicyGroupId="cdlxdefaultoidcpolicy" trackUserSessionsForLogout="true" xmlns:urn="urn:pingidentity.com:pf:openid:connect:idp:policy">
     <urn:ProviderPolicyGroup policyId="cdlxdefaultoidcpolicy" idTokenLife="60" includeSriInIdToken="true" includeUserInfoInIdToken="true" includeSHashInIdToken="true" returnIdTokenOnRefreshGrant="false" policyName="cdlxdefaultoidcpolicy" accessTokenManagerId="cdlxdefaultatm">
         <urn:UserInfoMapping>
             <urn1:AttributeMap Name="sub" Type="Persistent Grant" Value="persistentgrant.USER_KEY" xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>

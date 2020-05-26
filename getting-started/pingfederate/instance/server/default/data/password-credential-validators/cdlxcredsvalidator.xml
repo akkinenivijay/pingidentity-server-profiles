@@ -3,9 +3,9 @@
     <urn:Fields>
         <urn:Field name="LDAP Datastore">LDAP-3D4BE66BF0E5020987D8F5DAC0CD281075FAA0E8</urn:Field>
         <urn:Field name="Search Base">DC=cl,DC=local</urn:Field>
-        <urn:Field name="Search Filter">(|(sAMAccountName=${username})(userPrincipalName=${username}))</urn:Field>
+        <urn:Field name="Search Filter">sAMAccountName=${username}</urn:Field>
         <urn:Field name="Scope of Search">Subtree</urn:Field>
-        <urn:Field name="Case-Sensitive Matching">true</urn:Field>
+        <urn:Field name="Case-Sensitive Matching">false</urn:Field>
         <urn:Field name="Display Name Attribute">displayName</urn:Field>
         <urn:Field name="Mail Attribute">mail</urn:Field>
         <urn:Field name="SMS Attribute"/>

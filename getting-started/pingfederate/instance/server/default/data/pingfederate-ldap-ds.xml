@@ -5,8 +5,8 @@
         <ldap:principal>CN=Akkineni\, Vijay,OU=SBSUsers,OU=Users,OU=MyBusiness,DC=cl,DC=local</ldap:principal>
         <ldap:use-ssl>false</ldap:use-ssl>
         <ldap:use-dns-srv-records>false</ldap:use-dns-srv-records>
-        <ldap:ad-referral>true</ldap:ad-referral>
-        <ldap:credentials>eyJhbGciOiJkaXIiLCJlbmMiOiJBMTI4Q0JDLUhTMjU2Iiwia2lkIjoiUWVzOVR5eTV5WiIsInZlcnNpb24iOiIxMC4xLjAuMiJ9..ed4uwpn0As7Fl5HgU12Pfw.auyK-r-YNxLqjJkax5r7ZQ.E-hRDZovO0b7R_RDMbw6fw</ldap:credentials>
+        <ldap:ad-referral>false</ldap:ad-referral>
+        <ldap:credentials>eyJhbGciOiJkaXIiLCJlbmMiOiJBMTI4Q0JDLUhTMjU2Iiwia2lkIjoiUWVzOVR5eTV5WiIsInZlcnNpb24iOiIxMC4wLjIuMiJ9..60cPTYvsqqz_MhKIUV7uaQ.Jp6_6EyCcABqIfzQCjzE1Q.tW8q0_MhwhiJCQ0MOX3Z1w</ldap:credentials>
         <ldap:authenticationMeth>simple</ldap:authenticationMeth>
         <ldap:description>cl.local</ldap:description>
         <ldap:name>cl.local</ldap:name>
