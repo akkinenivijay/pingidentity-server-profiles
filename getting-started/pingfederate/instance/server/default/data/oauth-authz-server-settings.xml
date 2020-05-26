@@ -1,5 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urn:OAuthConfig enableOAuth="true" authzCodeLength="30" authzCodeTimeout="60" rollRefreshTokens="false" rollingInterval="0" refreshTokenLength="42" atmIdForOAuthGrantManagement="" scopeForOAuthGrantManagement="" globalPersistentGrantExpirationTime="-1" globalPersistentGrantExpirationTimeUnit="d" globalPersistentGrantIdleTimeout="30" globalPersistentGrantIdleTimeoutTimeUnit="d" tokenEndpointBaseUrl="" userAuthzUrl="" registeredAuthzPath="" pendingAuthzTimeout="600" bypassActivationCodeConfirmation="false" devicePollingInterval="5" authzConsentSetting="INTERNAL" xmlns:urn="urn:pingidentity.com:pf:oauth:conf">
+<urn:OAuthConfig enableOAuth="true" authzCodeLength="30" authzCodeTimeout="60" rollRefreshTokens="false" rollingInterval="0" refreshTokenLength="42" atmIdForOAuthGrantManagement="" scopeForOAuthGrantManagement="" globalPersistentGrantExpirationTime="-1" globalPersistentGrantExpirationTimeUnit="d" globalPersistentGrantIdleTimeout="30" globalPersistentGrantIdleTimeoutTimeUnit="d" tokenEndpointBaseUrl="" userAuthzUrl="" registeredAuthzPath="" pendingAuthzTimeout="600" bypassActivationCodeConfirmation="false" devicePollingInterval="5" authzConsentSetting="" externalConsentAdapterId="" returnedScopeAttributeName="" xmlns:urn="urn:pingidentity.com:pf:oauth:conf">
+    <urn:UserKeyToAccessTokenMapping contextId="authz_req|cdlxformadapter" tokenManagerId="cdlxdefaultatm">
+        <urn1:AttributeMap Name="mail" Type="Adapter" Value="adapter.mail" xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
+        <urn1:AttributeMap Name="manager" Type="Adapter" Value="adapter.manager" xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
+        <urn1:AttributeMap Name="displayName" Type="Adapter" Value="adapter.displayName" xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
+        <urn1:AttributeMap Name="givenName" Type="Adapter" Value="adapter.givenName" xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
+        <urn1:AttributeMap Name="description" Type="Adapter" Value="adapter.description" xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
+        <urn1:AttributeMap Name="DN" Type="Adapter" Value="adapter.DN" xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
+        <urn1:AttributeMap Name="title" Type="Adapter" Value="adapter.title" xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
+        <urn1:AttributeMap Name="countryCode" Type="Adapter" Value="adapter.countryCode" xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
+        <urn1:AttributeMap Name="name" Type="Adapter" Value="adapter.name" xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
+        <urn1:AttributeMap Name="company" Type="Adapter" Value="adapter.company" xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
+        <urn1:AttributeMap Name="memberOf" Type="Adapter" Value="adapter.memberOf" xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
+        <urn1:AttributeMap Name="sn" Type="Adapter" Value="adapter.sn" xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
+        <urn1:AttributeMap Name="department" Type="Adapter" Value="adapter.department" xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
+        <urn1:TokenAuthorizationIssuanceCriteria xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
+    </urn:UserKeyToAccessTokenMapping>
+    <urn:AdapterToUserKeyMapping sourcePluginId="cdlxformadapter">
+        <urn1:AttributeMap Name="USER_NAME" Type="Adapter" Value="name" xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
+        <urn1:AttributeMap Name="USER_KEY" Type="Adapter" Value="username" xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
+        <urn1:TokenAuthorizationIssuanceCriteria xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
+    </urn:AdapterToUserKeyMapping>
     <urn:ReuseExistingPersistentGrantForGrant>implicit</urn:ReuseExistingPersistentGrantForGrant>
-    <urn:AllowAutoAuthzForExistingPersistentGrant>implicit</urn:AllowAutoAuthzForExistingPersistentGrant>
 </urn:OAuthConfig>

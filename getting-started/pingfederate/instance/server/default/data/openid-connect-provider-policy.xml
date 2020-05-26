@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urn:OpenIdConnectProviderPolicy enabled="false" defaultPolicyGroupId="cdlxdefaultoidcpolicy" trackUserSessionsForLogout="true" xmlns:urn="urn:pingidentity.com:pf:openid:connect:idp:policy">
+    <urn:ProviderPolicyGroup policyId="cdlxdefaultoidcpolicy" idTokenLife="60" includeSriInIdToken="true" includeUserInfoInIdToken="true" includeSHashInIdToken="true" returnIdTokenOnRefreshGrant="false" policyName="cdlxdefaultoidcpolicy" accessTokenManagerId="cdlxdefaultatm">
+        <urn:UserInfoMapping>
+            <urn1:AttributeMap Name="sub" Type="Persistent Grant" Value="persistentgrant.USER_KEY" xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
+            <urn1:AttributeMap Name="manager" Type="Token" Value="manager" xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
+            <urn1:AttributeMap Name="name" Type="Token" Value="name" xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
+            <urn1:AttributeMap Name="address.formatted" Type="Text" Value="675 Ponce De Leon Ave NE #6000, Atlanta, GA 30308" xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
+            <urn1:AttributeMap Name="memberOf" Type="Token" Value="memberOf" xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
+            <urn1:AttributeMap Name="preferred_username" Type="Token" Value="mail" xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
+            <urn1:AttributeMap Name="given_name" Type="Token" Value="givenName" xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
+            <urn1:AttributeMap Name="family_name" Type="Token" Value="sn" xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
+            <urn1:AttributeMap Name="email" Type="Token" Value="mail" xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
+            <urn1:TokenAuthorizationIssuanceCriteria xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
+        </urn:UserInfoMapping>
+        <urn:scopeAttributesMap>
+            <urn:item>
+                <urn:key>address</urn:key>
+                <urn:value>address.formatted</urn:value>
+            </urn:item>
+            <urn:item>
+                <urn:key>openid</urn:key>
+                <urn:value>address.formatted email family_name given_name manager memberOf name preferred_username</urn:value>
+            </urn:item>
+            <urn:item>
+                <urn:key>profile</urn:key>
+                <urn:value>family_name given_name name preferred_username</urn:value>
+            </urn:item>
+            <urn:item>
+                <urn:key>email</urn:key>
+                <urn:value>email</urn:value>
+            </urn:item>
+        </urn:scopeAttributesMap>
+        <urn:attributeContractInclusionMap/>
+    </urn:ProviderPolicyGroup>
+</urn:OpenIdConnectProviderPolicy>
